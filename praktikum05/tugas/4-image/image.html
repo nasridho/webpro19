@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Image Picker</title>
+	<script language="JavaScript">
+	
+	
+
+	function tukar(){
+	let hewans = document.getElementById("hewan").value;
+	
+	if (hewans == "ikan"){
+	document.getElementById("gambar").src = "gambar/ikan.jpg";
+	} else if (hewans == "ayam"){
+	document.getElementById("gambar").src = "gambar/ayam.jpg";
+	} else if (hewans == "kerbau"){
+	document.getElementById("gambar").src = "gambar/kerbau.jpg";
+	} else if (hewans == "burung"){
+	document.getElementById("gambar").src = "gambar/burung.jpg";
+	} else if (hewans == "gajah"){
+	document.getElementById("gambar").src = "gambar/gajah.jpg";
+	} else if (hewans == "kelinci"){
+	document.getElementById("gambar").src = "gambar/kelinci.jpg";
+	} else {
+	document.getElementById("gambar").src = "";
+	}
+	
+  	}
+
+	</script>
+	
+</head>
+<body>
+	<h2>Image Picker</h2>
+	<form>
+		
+		<select name="nama-hewan" id="hewan" onkeyup="tukar();" onchange="tukar();">
+			<option value="pilih">[Pilih Hewan]</option>
+			<option value="ikan">Ikan</option>
+			<option value="ayam">Ayam</option>
+			<option value="kerbau">Kerbau</option>
+			<option value="burung">Burung</option>
+			<option value="gajah">Gajah</option>
+			<option value="kelinci">Kelinci</option>
+		</select>
+		
+		
+	</form>
+	<br />
+	<img id="gambar" src=""/>
+</body>
+</html>

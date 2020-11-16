@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Konversi Kurs</title>
+	<script language="JavaScript">
+	
+	
+
+	function tukar(){
+	let kurs = document.getElementById("kursnya").value;
+	let uangnya = document.getElementById("asing").value;
+	
+	if (kurs == "USD"){
+	document.getElementById("rupiah").value = uangnya*9915;
+	} else if (kurs == "SGD"){
+	document.getElementById("rupiah").value = uangnya*13472;
+	} else if (kurs == "RMY"){
+	document.getElementById("rupiah").value = uangnya*874;
+	} else if (kurs == "JPY"){
+	document.getElementById("rupiah").value = uangnya*100;
+	} else if (kurs == "EUR"){
+	document.getElementById("rupiah").value = uangnya*15888;
+	} else if (kurs == "RSA"){
+	document.getElementById("rupiah").value = uangnya*3592;
+	} else {
+	document.getElementById("rupiah").value = "ERROR";
+	}
+	
+     
+	// document.getElementById("penjelasan").innerHTML = "Rp" + uangnya.replace(/\d(?=(?:\d{3})+$)/g, '$&.');
+	
+	}
+
+	</script>
+	
+</head>
+<body>
+	<h2>Konversi Kurs</h2>
+
+	<form>
+		<table>
+		<tr>
+		<td>Masukan Nilai</td>
+		<td>Valas</td>
+		<td>Nilai Rupiah</td>
+		</tr>
+		
+		<tr>
+		<td>
+		<input type="text" id="asing" onchange="tukar();" onkeyup="tukar();"/>
+		</td>
+		
+		<td>
+		<select name="kursuang" id="kursnya" onkeyup="tukar();" onchange="tukar();">
+			<option value="USD">Dollar US</option>
+			<option value="SGD">Dollar Singapore</option>
+			<option value="RMY">Ringgit Malaysia</option>
+			<option value="JPY">Yen Jepang</option>
+			<option value="EUR">Euro </option>
+			<option value="RSA">Riyal Arab Saudi</option>
+		</select>
+		</td>
+	
+		<td>
+		<input type="text" id="rupiah" disabled/>
+		</td>
+		</tr>
+		
+		</table>
+	</form>
+	
+	<span id="penjelasan"></spam>
+</body>
+</html>

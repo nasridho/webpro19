@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+#kotakchat {
+  background-color: lightblue;
+  text-align: left;
+  height: 200px;
+  width: 800px;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 5px;
+}
+	</style>
+	<meta charset="UTF-8">
+	<title>Konversi Kurs</title>
+	<script language="JavaScript">
+	
+
+	function kirim(){
+	let SudahAda = document.getElementById("kotakchat").innerHTML;
+	let ChatBaru = document.getElementById("pesan").value;
+	let pengirim = document.getElementById("akun").value;
+	
+	let gabung = SudahAda+"<br /><b>"+ pengirim + "</b>: " + ChatBaru;
+	console.log(gabung);
+	document.getElementById("kotakchat").innerHTML = gabung;
+	document.getElementById("pesan").value = "";
+	
+	}
+
+
+	</script>
+	
+</head>
+<body>
+	<h2>Chat Room</h2>
+	Tulis nama kamu: <input type="text" value="Ridho" id="akun"/></td>
+	<div id="kotakchat"></div>
+	<form>
+		
+		<textarea rows="3" cols="100" id="pesan"></textarea>
+		
+		<input type="button" value="Kirim" id="rupiah" onclick="kirim();"/>
+	
+	</form>
+	
+	<span id="penjelasan"></spam>
+</body>
+</html>
