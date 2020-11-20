@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<style>
+	.error {color: red;}
+	.berhasil {color: green;}
+	</style>
+	<script language="JavaScript">
+	var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	
+	function kirim(){
+	
+	let input_pelanggan = document.getElementById("pelanggan").value;
+	let input_email = document.getElementById("pelanggan").value;
+	let b_pelanggan = b_mail = b_tujuan = b_jam = b_tiket= false;
+	
+	if (input_pelanggan == ""){
+		document.getElementById("pelanggans").innerHTML = " Wajib diisi";
+	}
+	else if (input_pelanggan.length >= 30){
+		document.getElementById("pelanggans").innerHTML = " Karakter kelebihan";
+	} else {
+		document.getElementById("pelanggans").innerHTML = " ";
+		b_pelanggan = true;
+	}
+	
+	if(email.value.match(mailformat))
+	{
+		document.getElementById("emails").innerHTML = " ";
+		b_mail = true;
+	} else {
+		document.getElementById("emails").innerHTML = " Format E-mail kamu salah!";
+	}
+	
+
+	if (document.getElementById("jam").value == ""){
+		document.getElementById("jams").innerHTML = " Wajib diisi";
+	} else {
+		document.getElementById("jams").innerHTML = " ";
+		b_jam = true;
+	}
+	
+	if (document.getElementById("tujuan").value == ""){
+		document.getElementById("tujuans").innerHTML = " Wajib diisi";
+	} else {
+		document.getElementById("tujuans").innerHTML = " ";
+		b_tujuan = true;
+	}
+	
+	if (document.getElementById("tiket").value == "pilih"){
+		document.getElementById("tikets").innerHTML = " Wajib dipilih";
+	} else {
+		document.getElementById("tikets").innerHTML = " ";
+		b_tiket = true;
+	}
+	
+	if (b_pelanggan == true && b_mail == true && b_tujuan == true && b_jam == true && b_tiket == true){
+		let pesanberhasil = "<b>Form berhasil diisi!</b><br > Nama Pelanggan: "
+							+ document.getElementById("pelanggan").value + "<br />E-mail: "  
+							+ document.getElementById("email").value + "<br />Jam keberangkatan: "
+							+ document.getElementById("jam").value + " WIB<br />Tujuan: "
+							+ document.getElementById("tujuan").value + "<br /> Tiket: "
+							+ document.getElementById("tiket").value;
+		document.getElementById("berhasil").innerHTML = pesanberhasil;
+	} else {
+		document.getElementById("berhasil").innerHTML = " ";
+	}
+	
+	}
+	
+	
+
+
+	</script>
+	
+</head>
+<body>
+	<h2>Form</h2>
+	<form>
+		
+		Nama pelanggan <input type="text" id="pelanggan"/><span class="error" id="pelanggans"></span><br />
+		E-mail <input type="text" id="email"/><span class="error" id="emails"></span><br />
+		Jam Keberangkatan <input type="time" id="jam"/> WIB <span class="error" id="jams"></span><br />
+		Tujuan Keberangkatan <input type="text" id="tujuan"/><span class="error" id="tujuans"></span><br />
+		
+		Jumlah Tiket  <select name="jumlah-tiket" id="tiket">
+			<option value="pilih">[Pilih Tiket]</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select><span class="error" id="tikets"></span><br />
+		
+		<input type="button" value="Kirim" onclick="kirim();"/>
+		<br />
+		<br />
+		
+		<span class="berhasil" id="berhasil"></span><br />
+		
+		
+		
+	</form>
+	<br />
+	<img id="gambar" src=""/>
+</body>
+</html>
