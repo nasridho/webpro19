@@ -1,0 +1,35 @@
+.intro a {
+	font-family: 'Dancing Script', cursive;
+}
+
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.arial h1{
+    text-decoration-color: aqua;
+}
+
+.gam {
+    background-image: url("../img/silok.png");
+    background-repeat: no-repeat;
+    padding-left: 35px !important;
+    background-size: 30%;
+    background-position-y: 15%;
+  }
+
+  .fontD{
+      font-family: 'Dancing Script', cursive;
+  }
+/* .atas {
+	display: table;
+	width: 100%;
+	background: url(../img/header6blue.jpg) no-repeat center center;
+	background-color: #e5e5e5;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+    -o-background-size: cover;
+} 
+
+GAK JADI DIPAKE
+*/

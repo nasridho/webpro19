@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="description" content="Tugas proyek akhir">
+    <meta name="author" content="Achmad Izhar, Ridho Musyaffa, Rizki Maulana, Yusuf Fadillah">
+    <link rel="icon" type="png" href="img/silok.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	
+    <link rel="stylesheet" href="style/style.css">
+	
+
+
+
+
+    <style>
+        section{
+            min-height: 250px;
+        }
+		
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
+		
+    </style>
+
+
+    <title>SILOKER NF</title>
+  </head>
+  <body class="mt-5">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+        <div class="container intro">
+        
+          <a class="navbar-brand gam" href="index.html"> SILOKERNF</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lowongan.html" >Lowongan Baru</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="isiloker.html">Isi Loker</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="mitra.html">Daftar Mitra</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="berita.html">Berita</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Pencarian" aria-label="Search">
+              <button class="btn btn-success me-3" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+           
+		   <ul class="navbar-nav">
+                  
+                  <li class="nav-item dropdown">
+                      <a class="btn btn-primary dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Admin&nbsp;
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="kelola.html">Kelola Lowongan kerja</a></li>
+                          <li><a class="dropdown-item" href="">Kelola Mitra</a></li>
+                          <li><a class="dropdown-item" href="">Isi Berita</a></li>
+                          <li><a class="dropdown-item" href="">Daftar Berita</a></li>
+                          <li><a class="dropdown-item text-danger" href="../../index.html">Logout</a></li>
+                      </ul>
+                  </li>
+              </ul>
+		   
+		   
+          </div>
+        </div>
+      </nav>
+      
+      <!-- isi atas "sistem informasi" -->
+     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-end">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Admin Panel</li>
+            </ol>
+        </nav>
+
+
+      <!-- daleman -->
+	 
+
+
+        <section id="konten" class="konten">
+            <div class="container">
+            <div class="row">
+				<div class="col-md-12">
+						<h4 class="card-title"><center>Kelola Lowongan Kerja</center></h4>
+					
+                            <div class="row">
+                               
+
+			
+                                <div class="col-md-12">
+								
+								
+							
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Tanggal</th>
+      <th scope="col">Perusahaan</th>
+      <th scope="col">Kontak</th>
+	  <th scope="col">E-mail</th>
+      <th scope="col">Deskripsi</th>
+      <th scope="col">Pengaturan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>21 Jan 2021</td>
+      <td>PT PAC Consultant</td>
+	  <td>0812888123</td>
+	  <td>sales@pac.com</td>
+	  <td>Programmer</td>
+	  <td> <a class="btn btn-warning me-3 text-dark" data-toggle="modal" data-target="#myModal" role="button"><i class="fa fa-pencil-square-o"> Edit</i></a>
+	  <a class="btn btn-danger text-light"  data-toggle="modal" data-target="#myModal2" role="button"><i class="fa fa-trash">Hapus</i></a></td>
+	</tr>
+	<tr>
+      <th scope="row">2</th>
+      <td>21 Jan 2021</td>
+      <td>PT PAC Consultant</td>
+	  <td>0812888123</td>
+	  <td>sales@pac.com</td>
+	  <td>Programmer</td>
+	  <td> <a class="btn btn-warning me-3 text-dark" data-toggle="modal" data-target="#myModal" role="button"><i class="fa fa-pencil-square-o"> Edit</i></a>
+	  <a class="btn btn-danger text-light"  data-toggle="modal" data-target="#myModal2" role="button"><i class="fa fa-trash">Hapus</i></a></td>
+	</tr>
+	<tr>
+      <th scope="row">3</th>
+      <td>21 Jan 2021</td>
+      <td>PT PAC Consultant</td>
+	  <td>0812888123</td>
+	  <td>sales@pac.com</td>
+	  <td>Programmer</td>
+	  <td> <a class="btn btn-warning me-3 text-dark" data-toggle="modal" data-target="#myModal" role="button"><i class="fa fa-pencil-square-o"> Edit</i></a>
+	  <a class="btn btn-danger text-light"  data-toggle="modal" data-target="#myModal3" role="button"><i class="fa fa-trash">Hapus</i></a></td>
+	</tr>
+  </tbody>
+</table>
+
+													
+                                  
+                                </div>
+                               
+                
+            </div>
+						
+						
+						
+						
+				</div>
+					
+               
+            </div>
+            </div>
+			
+	
+        </section>
+		
+		
+		
+		
+		
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Form Edit</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Form Edit
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Anda yakin mau hapus?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Iya saya ingin hapus</button>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+		
+		
+		
+		<!-- The Modal -->
+<div class="modal" id="myModal3">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Detail Lowongan</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h4 class="modal-title">PT Smart City</h4>
+		<h5>Mid atau Senior Front End Engineer</h5>
+		Syarat pekerjaan
+• Pria / Wanita
+• Usia Max 32 
+•Tunggal
+• Kandidat harus memiliki setidaknya gelar Sarjana dalam Ilmu Komputer / Teknologi Informasi atau yang setara.
+• Minimal 3-5 tahun pengalaman kerja di bidang terkait diperlukan untuk posisi ini
+• Kemahiran dalam kerangka React.js
+Sallary: 7-14 Juta
+Hari Kerja: Senin-Jumat
+<br />
+Silakan kirim CV ke</br></br>
+Jawa Barat: recruitbandung@pac-consultant.com</br>
+Jabodetabek: recruitjakarta@pac-consultant.com </br>dengan subject Name_Postion. Terima kasih</br>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+		
+
+        <footer class="bg-light text-black"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <hr class="my-2">
+                        <p class="mt-2">Develop By Mahasiswa STT-NF @2021</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+   
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
